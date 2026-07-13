@@ -1,0 +1,6 @@
+/* removing default browser margin so my layout isn't offset */
+body {
+  margin: 0;
+  /* light gray instead of pure white, just looks a bit softer */
+  background-color: #f9f9f9;
+}
