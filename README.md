@@ -147,8 +147,7 @@ npm run dev
 ## Live Demo
 
 
-
-reactuserdirectory.netlify.app
+https://reactuserdirectory.netlify.app/
 
 ---
 
