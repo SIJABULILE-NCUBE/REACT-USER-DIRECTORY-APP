@@ -1,79 +1,94 @@
+/* ==========================================================================
+   App Container - overall page layout and typography
+   ========================================================================== */
 .app {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 700px;      /* keeps my content readable on wide screens */
+  margin: 0 auto;        /* used it to center the app horizontally */
+  padding: 20px;         /* gave itbreathing room */
   font-family: Arial, sans-serif;
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #333;           /* dark gray instead of pure black, softer on the eyes */
 }
 
+/* ==========================================================================
+   Search Box - input for filtering/finding users
+   ========================================================================== */
 .search-box {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* padding is included in the 100% width, not added on top */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
+/* ==========================================================================
+   New User Form - card-style container for adding a new user
+   ========================================================================== */
 .new-user-form {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0;  /* light gray to visually separate form from list */
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
 .new-user-form h2 {
-  margin-top: 0;
+  margin-top: 0;      /* removes default heading margin so it sits flush with form top */
   font-size: 18px;
 }
 
 .new-user-form input {
-  display: block;
+  display: block;          /* stacks inputs vertically, one per line */
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* same reasoning as .search-box above */
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .new-user-form button {
   padding: 8px 16px;
-  background-color: #4a90d9;
+  background-color: #4a90d9;  /* brand blue */
   color: white;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: pointer;             /* signals the element is clickable */
 }
 
 .new-user-form button:hover {
-  background-color: #3a7bc0;
+  background-color: #3a7bc0;  /* darker blue on hover for interactive feedback */
 }
 
+/* ==========================================================================
+   User List - container for all user cards
+   ========================================================================== */
 .user-list {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: column;  /* stacks user cards vertically */
+  gap: 10px;               /* consistent spacing between cards, no margin hacks needed */
 }
 
+/* ==========================================================================
+   User Card - individual user entry
+   ========================================================================== */
 .user-card {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 12px 15px;
-  background-color: #fff;
+  background-color: #fff;  /* white card stands out against page background */
 }
 
 .user-card h3 {
-  margin: 0 0 5px 0;
-  color: #4a90d9;
+  margin: 0 0 5px 0;   /* removes default margin, adds small gap below only */
+  color: #4a90d9;      /* matches brand blue used on the button, ties the UI together */
 }
 
 .user-card p {
   margin: 3px 0;
-  color: #555;
+  color: #555;         /* muted gray for secondary text, less emphasis than the name */
 }
