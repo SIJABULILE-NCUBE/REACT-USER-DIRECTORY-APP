@@ -146,10 +146,15 @@ npm run dev
 
 ## Live Demo
 
-Coming soon...
+
+
+reactuserdirectory.netlify.app
+
+---
+
+## Loom Presentation
 
 Replace this section with your deployed Netlify or Vercel link.
-
 ---
 
 ## Documentation
