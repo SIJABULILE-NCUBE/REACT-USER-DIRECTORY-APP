@@ -1,94 +1,226 @@
-/* ==========================================================================
-   App Container - overall page layout and typography
-   ========================================================================== */
 .app {
-  max-width: 700px;      /* keeps my content readable on wide screens */
-  margin: 0 auto;        /* used it to center the app horizontally */
-  padding: 20px;         /* gave itbreathing room */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
   font-family: Arial, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* header row holds the title and the dark/light mode button side by side */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
-  text-align: center;
-  color: #333;           /* dark gray instead of pure black, softer on the eyes */
+  color: #333;
+  margin: 0;
 }
 
-/* ==========================================================================
-   Search Box - input for filtering/finding users
-   ========================================================================== */
+.theme-toggle {
+  padding: 8px 14px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.theme-toggle:hover {
+  background-color: #ddd;
+}
+
 .search-box {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
-  box-sizing: border-box;  /* padding is included in the 100% width, not added on top */
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* ==========================================================================
-   New User Form - card-style container for adding a new user
-   ========================================================================== */
 .new-user-form {
-  background-color: #f0f0f0;  /* light gray to visually separate form from list */
+  background-color: #f0f0f0;
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
 .new-user-form h2 {
-  margin-top: 0;      /* removes default heading margin so it sits flush with form top */
+  margin-top: 0;
   font-size: 18px;
 }
 
 .new-user-form input {
-  display: block;          /* stacks inputs vertically, one per line */
+  display: block;
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
-  box-sizing: border-box;  /* same reasoning as .search-box above */
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .new-user-form button {
   padding: 8px 16px;
-  background-color: #4a90d9;  /* brand blue */
+  background-color: #4a90d9;
   color: white;
   border: none;
   border-radius: 4px;
-  cursor: pointer;             /* signals the element is clickable */
+  cursor: pointer;
 }
 
 .new-user-form button:hover {
-  background-color: #3a7bc0;  /* darker blue on hover for interactive feedback */
+  background-color: #3a7bc0;
 }
 
-/* ==========================================================================
-   User List - container for all user cards
-   ========================================================================== */
 .user-list {
   display: flex;
-  flex-direction: column;  /* stacks user cards vertically */
-  gap: 10px;               /* consistent spacing between cards, no margin hacks needed */
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* ==========================================================================
-   User Card - individual user entry
-   ========================================================================== */
 .user-card {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 12px 15px;
-  background-color: #fff;  /* white card stands out against page background */
+  background-color: #fff;
 }
 
 .user-card h3 {
-  margin: 0 0 5px 0;   /* removes default margin, adds small gap below only */
-  color: #4a90d9;      /* matches brand blue used on the button, ties the UI together */
+  margin: 0 0 5px 0;
+  color: #4a90d9;
 }
 
 .user-card p {
   margin: 3px 0;
-  color: #555;         /* muted gray for secondary text, less emphasis than the name */
+  color: #555;
+}
+
+.delete-button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  color: #777;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #4a90d9;
+}
+
+/* ---------------- DARK MODE ---------------- */
+/* when darkMode is true, App.jsx adds the "dark" class to .app
+   these rules override the light mode colours above */
+
+.app.dark {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+.app.dark h1 {
+  color: #eee;
+}
+
+.app.dark .theme-toggle {
+  background-color: #333;
+  border-color: #555;
+  color: #eee;
+}
+
+.app.dark .theme-toggle:hover {
+  background-color: #444;
+}
+
+.app.dark .search-box {
+  background-color: #2a2a2a;
+  border-color: #555;
+  color: #eee;
+}
+
+.app.dark .new-user-form {
+  background-color: #2a2a2a;
+}
+
+.app.dark .new-user-form input {
+  background-color: #333;
+  border-color: #555;
+  color: #eee;
+}
+
+.app.dark .user-card {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+.app.dark .user-card p {
+  color: #ccc;
+}
+
+.app.dark .footer {
+  border-top-color: #444;
+  color: #aaa;
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+/* tablets and smaller */
+@media (max-width: 600px) {
+  .app {
+    padding: 12px;
+  }
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .theme-toggle {
+    width: 100%;
+  }
+
+  .new-user-form h2 {
+    font-size: 16px;
+  }
+
+  .user-card h3 {
+    font-size: 16px;
+  }
+}
+
+/* really small phones */
+@media (max-width: 380px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .search-box,
+  .new-user-form input,
+  .new-user-form button {
+    font-size: 14px;
+  }
 }
