@@ -16,6 +16,14 @@ function App() {
   // this will hold any users we add ourselves using the bonus form
   const [newUsers, setNewUsers] = useState([]);
 
+  // true = dark mode, false = light mode
+  // starting with light mode by default
+  const [darkMode, setDarkMode] = useState(false);
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
+
   // useEffect runs this code once, when the component first loads
   // (empty array [] at the end means "only run once")
   useEffect(() => {
@@ -41,6 +49,12 @@ function App() {
     setNewUsers([newUser, ...newUsers]);
   }
 
+  // function to remove a manually-added user from the list
+  // filter() returns a new array without the one at "indexToRemove"
+  function handleDeleteUser(indexToRemove) {
+    setNewUsers(newUsers.filter((user, index) => index !== indexToRemove));
+  }
+
   // filter the users based on what's typed in the search box
   // toLowerCase() so search isn't case sensitive
   const filteredUsers = users.filter((user) =>
@@ -48,8 +62,13 @@ function App() {
   );
 
   return (
-    <div className="app">
-      <h1>User Directory</h1>
+    <div className={darkMode ? "app dark" : "app"}>
+      <div className="header-row">
+        <h1>User Directory</h1>
+        <button className="theme-toggle" onClick={toggleDarkMode}>
+          {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </div>
 
       {/* bonus part - form to add a new user */}
       <NewUserForm onAddUser={handleAddUser} />
@@ -75,6 +94,7 @@ function App() {
             name={user.name}
             email={user.email}
             company="Added manually"
+            onDelete={() => handleDeleteUser(index)}
           />
         ))}
 
@@ -95,6 +115,19 @@ function App() {
           />
         ))}
       </div>
+
+      <footer className="footer">
+        <p>
+          Built by Sijabulile Ncube -{" "}
+          
+            href="https://github.com/SIJABULILE-NCUBE"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
