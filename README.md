@@ -118,16 +118,12 @@ Only manually created users can be deleted. This keeps the original API data unc
 
 ## Installation
 
-Clone the repository:
 
-```bash
-git clone <repository-url>
-```
 
 Navigate into the project:
 
 ```bash
-cd user-directory-app
+cd react-user-directory-app
 ```
 
 Install dependencies:
@@ -153,7 +149,7 @@ https://reactuserdirectory.netlify.app/
 
 ## Loom Presentation
 
-Replace this section with your deployed Netlify or Vercel link.
+https://www.loom.com/share/a254635a92374880bade3227ec34d22d
 ---
 
 ## Documentation

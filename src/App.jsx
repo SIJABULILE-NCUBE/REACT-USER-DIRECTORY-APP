@@ -4,7 +4,7 @@ import NewUserForm from "./NewUserForm";
 import "./App.css";
 
 function App() {
-  // this will hold all the users we get back from the API
+  // this holds all the users we get back from the API
   const [users, setUsers] = useState([]);
 
   // this holds whatever the user is typing in the search box
