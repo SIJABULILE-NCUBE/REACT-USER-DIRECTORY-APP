@@ -119,7 +119,7 @@ function App() {
       <footer className="footer">
         <p>
           Built by Sijabulile Ncube -{" "}
-          
+          <a
             href="https://github.com/SIJABULILE-NCUBE"
             target="_blank"
             rel="noreferrer"
