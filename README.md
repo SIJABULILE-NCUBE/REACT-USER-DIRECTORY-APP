@@ -47,9 +47,9 @@ The project demonstrates how React state, hooks, and reusable components work to
 
 ### User Experience
 
-- 🌙 Dark and Light Mode toggle
-- 📱 Responsive design for desktop, tablet, and mobile
-- ⚡ Fast and interactive user interface
+-  Dark and Light Mode toggle
+-  Responsive design for desktop, tablet, and mobile
+-  Fast and interactive user interface
 
 ---
 
@@ -115,7 +115,14 @@ Users can enter a name and email address through a controlled form. Submitted us
 Only manually created users can be deleted. This keeps the original API data unchanged while demonstrating state updates and event handling.
 
 ---
+## Linting
 
+This project uses Oxlint, which came bundled with the Vite React template. 
+It checks that React hooks are used correctly (rules-of-hooks) and warns 
+if a file exports something alongside a component that could break fast 
+refresh. Config is in `.oxlintrc.json`.
+
+---
 ## Installation
 
 
@@ -208,5 +215,6 @@ Potential enhancements include:
 ## Author
 
 **Sijabulile Ncube**
+date Created:13/07/2026
 
 Software Developer passionate about building responsive, user-friendly web applications while continuously expanding my knowledge of React and modern JavaScript. 
