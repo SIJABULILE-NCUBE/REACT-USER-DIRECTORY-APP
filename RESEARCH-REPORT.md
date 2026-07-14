@@ -1,7 +1,7 @@
 # Research Report: Fetching Data, Forms & Controlled Components
 
 **Sijabulile Ncube**
-07/03/2026
+13/07/2026
 
 ## Fetching Data
 
@@ -11,7 +11,7 @@ When we talk about fetching data in React, we basically mean getting information
 
 ### Why do React apps fetch data?
 
-React apps fetch data because most real apps aren't static. In my current role as a credit risk specialist, one thing that's obvious there is that data changes constantly: client info, risk scores, account details, none of that stays the same for long. Apps need to reflect that. If we hardcoded everything, the app would just be stuck showing old, fake info forever.
+React apps fetch data because most real apps aren't static. In my current role as , one thing that's obvious there is that data changes constantly: client info, risk scores, account details, none of that stays the same for long. Apps need to reflect that. If we hardcoded everything, the app would just be stuck showing old, fake info forever.
 
 ### What is an API?
 
