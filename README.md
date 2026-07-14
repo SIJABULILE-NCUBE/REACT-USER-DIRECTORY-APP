@@ -1,4 +1,4 @@
-# User Directory App
+#React User Directory App
 
 A responsive React application that demonstrates how to fetch data from an external API, build forms using controlled components, and implement real-time search functionality.
 
