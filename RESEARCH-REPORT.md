@@ -140,3 +140,10 @@ function NameInput() {
   );
 }
 ```
+
+## References
+
+- React documentation, available at https://react.dev
+- JSONPlaceholder, the test API used for fetching data, available at https://jsonplaceholder.typicode.com
+- Melsoft Academy, LMS: Module 5,6,7: https://portal.melsoft.org/dashboard/courses/27
+- MDN Web Docs, for HTML form elements, available at https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
